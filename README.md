@@ -4,4 +4,4 @@ A simple utility built on FastAPI to check whether the given list of URLs are up
 
 To run the project, use the following command
 
-# uvicorn main:app --reload
+## uvicorn main:app --reload
