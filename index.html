@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+          <th>URL</th>
+          <th>Status Code</th>
+          <th>Status</th>
+          <th>Time to Respond</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for items in result %}
+        <tr>
+            <td>{{ items.URL }}</td>
+            <td>{{ items.StatusCode}}</td>
+            <td>{{ items.Status }}</td>
+            <td>{{ items.ETA }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
