@@ -14,8 +14,12 @@
       {% for items in result %}
         <tr>
             <td>{{ items.URL }}</td>
-            <td>{{ items.StatusCode}}</td>
-            <td>{{ items.Status }}</td>
+            <td>{{ items.StatusCode}}  {{ items.Status }}</td>
+            {% if items.StatusCode == 200 %}
+            <td style="color: green">{{ items.Status }}</td>
+            {% else %}
+            <td style="color: red">{{ items.Status }}</td>
+            {% endif %}
             <td>{{ items.ETA }}</td>
         </tr>
       {% endfor %}
